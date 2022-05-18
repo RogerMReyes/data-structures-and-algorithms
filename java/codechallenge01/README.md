@@ -2,9 +2,9 @@
 
 In this challenge the problem domain was to take a given array and reverse the values inside
 
-## WhiteBoard Process 01
+## WhiteBoard Process
 
-![Code Challenge 01](/java/imgs/CodeChallenge01.jpg)
+![Code Challenge 01](../imgs/CodeChallenge01.jpg)
 
 ## Approach & Efficiency
 

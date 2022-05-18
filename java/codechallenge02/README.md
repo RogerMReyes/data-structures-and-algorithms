@@ -2,10 +2,10 @@
 
 In this challenge the problem domain was to take a given array and insert the given value into the center of the array
 
-## WhiteBoard Process 02
+## WhiteBoard Process
 
-![Code Challenge 01](/java/imgs/CodeChallenge02.jpg)
+![Code Challenge 01](../imgs/CodeChallenge02.jpg)
 
-## Approach & Efficiency 02
+## Approach & Efficiency
 
-In this approach I decided to create a new array that will take in the values of the initial array. I iterated over the initial array and pushed the value at that iteration into the new array. If the iteration equaled to half the initial array length rounded up then the given value was pushed into first then continued on. Once the loop ended the function then returned the new array. The effieciency should be O(n) timing since a single for loop was used.
+In this approach I decided to create a new array that will take in the values of the initial array. I iterated over the initial array and copied the values at that iteration into the new array. If the iteration equaled to half the initial array length rounded up then the given value was pushed into first then continued on. After adding the extra value I had to take into account the shift to the right and added 1 to the future indexes. Once the loop ended the function then returned the new array. The efficiency should be O(n) timing since a single for loop was used.
