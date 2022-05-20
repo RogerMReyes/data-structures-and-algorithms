@@ -19,7 +19,7 @@ class LinkListTest {
       for(int i = 1; i <= 5; i++){
         newList.insert(i);
       }
-      assertEquals(5, 5);
+      assertTrue(newList.includes(5));
     }
 
     @Test void toStringReturnsString(){
