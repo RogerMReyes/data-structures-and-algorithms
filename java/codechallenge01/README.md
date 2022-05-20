@@ -4,7 +4,7 @@ In this challenge the problem domain was to take a given array and reverse the v
 
 ## WhiteBoard Process
 
-![Code Challenge 01](../imgs/CodeChallenge01.jpg)
+![Code Challenge 01](../datastructures/lib/src/main/java/codechallenges/imgs/CodeChallenge01.jpg)
 
 ## Approach & Efficiency
 

@@ -4,7 +4,7 @@ In this challenge the problem domain was to take a given array and a given key v
 
 ## WhiteBoard Process
 
-![Code Challenge 03](../imgs/CodeChallenge03.jpg)
+![Code Challenge 03](../datastructures/lib/src/main/java/codechallenges/imgs/CodeChallenge03.jpg)
 
 ## Approach & Efficiency
 
