@@ -4,7 +4,7 @@ In this challenge the problem domain was to find the value of the fibonacci sequ
 
 ## WhiteBoard Process
 
-![Code Challenge 04](../imgs/CodeChallenge04.jpg)
+![Code Challenge 04](../datastructures/lib/src/main/java/codechallenges/imgs/CodeChallenge04.jpg)
 
 ## Approach & Efficiency
 

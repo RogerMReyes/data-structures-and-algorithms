@@ -4,7 +4,7 @@ In this challenge the problem domain was to take a given array and insert the gi
 
 ## WhiteBoard Process
 
-![Code Challenge 01](../imgs/CodeChallenge02.jpg)
+![Code Challenge 01](../datastructures/lib/src/main/java/codechallenges/imgs/CodeChallenge02.jpg)
 
 ## Approach & Efficiency
 
