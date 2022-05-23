@@ -27,8 +27,48 @@ class LinkListTest {
       LinkedList newList = new LinkedList();
       newList.insert(8);
       newList.insert(4);
-      assertEquals(newList.toString(), "[8]->[4]->NULL");
+      assertEquals(newList.toString(), "[4]->[8]->NULL");
     }
 
+  @Test
+  void appendReturnsUpdatedList() {
+    LinkedList newList = new LinkedList();
+    newList.insert(1);
+    newList.insert(2);
+    newList.insert(3);
+    newList.append(5);
+    assertEquals("[3]->[2]->[1]->[5]->NULL", newList.toString());
+  }
 
+  @Test
+  void insertBeforeReturnsUpdatedList() {
+    LinkedList newList = new LinkedList();
+    newList.insert(1);
+    newList.insert(2);
+    newList.insert(3);
+    newList.insertBefore(3,1);
+    assertEquals("[3]->[2]->[3]->[1]->NULL", newList.toString());
+  }
+
+  @Test
+  void insertAfterReturnsUpdatedList() {
+    LinkedList newList = new LinkedList();
+    newList.insert(1);
+    newList.insert(2);
+    newList.insert(3);
+    newList.insertAfter(3,2);
+    assertEquals("[3]->[2]->[3]->[1]->NULL", newList.toString());
+  }
+
+  @Test
+  void testing() {
+    LinkedList newList = new LinkedList();
+    newList.insert(1);
+    newList.insert(2);
+    newList.insert(3);
+    newList.insertAfter(5,1);
+    newList.insertBefore(7,5);
+    newList.append(9);
+    System.out.println(newList.toString());
+  }
 }
