@@ -15,7 +15,7 @@ class LinkListTest {
     }
 
     @Test void includesReturnsNodeValue(){
-      LinkedList newList = new LinkedList();
+      LinkedList<Integer> newList = new LinkedList<>();
       for(int i = 1; i <= 5; i++){
         newList.insert(i);
       }
@@ -23,8 +23,8 @@ class LinkListTest {
     }
 
     @Test void toStringReturnsString(){
-      Node newNode = new Node(5);
-      LinkedList newList = new LinkedList();
+      Node<Integer> newNode = new Node<>(5);
+      LinkedList<Integer> newList = new LinkedList<>();
       newList.insert(8);
       newList.insert(4);
       assertEquals(newList.toString(), "[4]->[8]->NULL");
@@ -32,7 +32,7 @@ class LinkListTest {
 
   @Test
   void appendReturnsUpdatedList() {
-    LinkedList newList = new LinkedList();
+    LinkedList<Integer> newList = new LinkedList<>();
     newList.insert(1);
     newList.insert(2);
     newList.insert(3);
@@ -42,7 +42,7 @@ class LinkListTest {
 
   @Test
   void insertBeforeReturnsUpdatedList() {
-    LinkedList newList = new LinkedList();
+    LinkedList<Integer> newList = new LinkedList<>();
     newList.insert(1);
     newList.insert(2);
     newList.insert(3);
@@ -52,7 +52,7 @@ class LinkListTest {
 
   @Test
   void insertAfterReturnsUpdatedList() {
-    LinkedList newList = new LinkedList();
+    LinkedList<Integer> newList = new LinkedList<>();
     newList.insert(1);
     newList.insert(2);
     newList.insert(3);
@@ -62,7 +62,7 @@ class LinkListTest {
 
   @Test
   void testing() {
-    LinkedList newList = new LinkedList();
+    LinkedList<Integer> newList = new LinkedList<>();
     newList.insert(1);
     newList.insert(2);
     newList.insert(3);
