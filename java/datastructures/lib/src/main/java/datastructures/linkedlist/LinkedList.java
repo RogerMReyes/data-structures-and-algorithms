@@ -1,11 +1,11 @@
 package datastructures.linkedlist;
 
-public class LinkedList {
-  public Node head = null;
-  public Node tail;
+public class LinkedList<T> {
+  public Node<T> head = null;
+  public Node<T> tail;
 
-  public void insert(int val){
-    Node newNode = new Node(val);
+  public void insert(T val){
+    Node<T> newNode = new Node<>(val);
     if (head != null) {
       newNode.next = head;
     }
@@ -15,9 +15,9 @@ public class LinkedList {
     head = newNode;
   }
 
-  public boolean includes(int key){
+  public boolean includes(T key){
     if(this.head == null) return false;
-    Node currentNode = head;
+    Node<T> currentNode = head;
     while(currentNode != null){
       if(currentNode.value == key){
         return true;
@@ -27,20 +27,20 @@ public class LinkedList {
     return false;
   }
 
-  public void append(int val){
-    Node newNode = new Node(val);
+  public void append(T val){
+    Node<T> newNode = new Node<>(val);
     tail.next = newNode;
     tail = newNode;
   }
 
-  public void insertBefore(int val, int match){
-    Node newNode = new Node(val);
+  public void insertBefore(T val, T match){
+    Node<T> newNode = new Node<>(val);
     if(head.value == match){
       newNode.next = head;
       head = newNode;
     }
-    Node current = head;
-    Node prev = head;
+    Node<T> current = head;
+    Node<T> prev = head;
     while(current != null){
       current = current.next;
       if(current.value == match){
@@ -52,9 +52,9 @@ public class LinkedList {
     }
   }
 
-  public void insertAfter(int val, int match){
-    Node newNode = new Node(val);
-    Node current = head;
+  public void insertAfter(T val, T match){
+    Node<T> newNode = new Node<>(val);
+    Node<T> current = head;
     while(current != null){
       if(current.value == match){
         newNode.next = current.next;
@@ -74,7 +74,7 @@ public class LinkedList {
     if(head == null) {
       return "NULL";
     }
-    Node currentNode = head;
+    Node<T> currentNode = head;
     while(currentNode != null){
       response = response + "[" + currentNode.value + "]->";
       currentNode = currentNode.next;
