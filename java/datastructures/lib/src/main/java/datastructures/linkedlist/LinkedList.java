@@ -3,6 +3,7 @@ package datastructures.linkedlist;
 public class LinkedList<T> {
   public Node<T> head = null;
   public Node<T> tail;
+  public int listLength = 0;
 
   public void insert(T val){
     Node<T> newNode = new Node<>(val);
@@ -13,6 +14,7 @@ public class LinkedList<T> {
       tail = newNode;
     }
     head = newNode;
+    listLength++;
   }
 
   public boolean includes(T key){
@@ -31,6 +33,7 @@ public class LinkedList<T> {
     Node<T> newNode = new Node<>(val);
     tail.next = newNode;
     tail = newNode;
+    listLength++;
   }
 
   public void insertBefore(T val, T match){
@@ -50,6 +53,7 @@ public class LinkedList<T> {
       }
       prev = current;
     }
+    listLength++;
   }
 
   public void insertAfter(T val, T match){
@@ -65,8 +69,23 @@ public class LinkedList<T> {
       }
       current = current.next;
     }
+    listLength++;
   }
 
+  public T kthFromEnd(int k){
+    if(k >= listLength || k < 0){
+      return null;
+    }
+    int stopPoint = listLength - k;
+    Node<T> current = head;
+    for(int i = 0; i < stopPoint; i++){
+      if(i == stopPoint - 1){
+        return current.value;
+      }
+      current = current.next;
+    }
+    return null;
+  }
 
   @Override
   public String toString(){

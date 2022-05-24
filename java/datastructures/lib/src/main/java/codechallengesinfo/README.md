@@ -80,3 +80,16 @@ In this challenge the problem domain was to add another 3 methods that allows yo
 
 In this challenge the key focus was ensuring that I always had a reference to the head node and figuring out how to manage the pointers allowed me to move the nodes around without losing any of the nodes. We are starting to implement the use of classes a lot more and explore the functionality that they provide.
 
+---
+
+#  07 Linked List Extended
+
+In this challenge the problem domain was to return the value of the node that was k away from the tail in the list
+
+## WhiteBoard Process
+
+![Code Challenge 07](imgs/CodeChallenge07.jpg)
+
+## Approach & Efficiency
+
+In this challenge I decided to add another property to our LinkedList class that tracks how many nodes are added to the list. This made approaching the kthFromEnd() method much easier to navigate. Knowing the size of the list I was able to subtract the given argument from the size and iterate through the list to that resulting value.
