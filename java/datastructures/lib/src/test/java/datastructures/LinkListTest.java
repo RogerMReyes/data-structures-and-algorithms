@@ -69,6 +69,27 @@ class LinkListTest {
     newList.insertAfter(5,1);
     newList.insertBefore(7,5);
     newList.append(9);
-    System.out.println(newList.toString());
+//    System.out.println(newList.toString());
+  }
+
+  @Test
+  void kthFromEndReturnsSecondValueFromTail() {
+    LinkedList<Integer> newList = new LinkedList<>();
+    newList.insert(2);
+    newList.insert(8);
+    newList.insert(3);
+    newList.insert(1);
+//    System.out.println(newList.toString() + " " + newList.kthFromEnd(2));
+  }
+
+  @Test
+  void kthFromEndReturnsNullForEdgeCases() {
+    LinkedList<Integer> newList = new LinkedList<>();
+    assertEquals(null, newList.kthFromEnd(4));
+    newList.insert(1);
+    assertEquals(null, newList.kthFromEnd(1));
+    newList.insert(2);
+    assertEquals(null, newList.kthFromEnd(2));
+    assertEquals(null, newList.kthFromEnd(-3));
   }
 }
