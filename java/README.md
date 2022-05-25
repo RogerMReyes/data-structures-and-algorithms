@@ -1,78 +1,95 @@
-# Data Structures and Algorithms
+# 01 Reverse an Array
 
-## Language: `Java`
+In this challenge the problem domain was to take a given array and reverse the values inside
 
-### Folder/Project Setup
+## WhiteBoard Process
 
-Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
+![Code Challenge 01](imgs/CodeChallenge01.jpg)
 
-### Data Structure: New Implementation
+## Approach & Efficiency
 
-These code challenges are typically done as the first challenge following the introduction of a new data structure. You will want to create a new class for the data structure itself as well as a test class to assert its operation.
+In this approach we aim a beginning and end pointer variable to the first and last value in the array. We then swap the two values using a third temp variable in iterations while incrementing/decrementing the pointers until all values inside the array have been hit. At most this method is using O(n) timing due to utilizing a loop.
 
-#### Implementation
+---
 
-- Create a new folder and class in the `datastructures` subfolder of the `main` branch of Gradle library source, with the name of the new data structure in the folder and class names, and complete your implementation there.
-  - Ex. Linked Lists:
-    - `lib\src\main\java\datastructures\linkedlist\LinkedList.java`
+# 02 Insert to Middle of an Array
 
-#### Tests
+In this challenge the problem domain was to take a given array and insert the given value into the center of the array
 
-- Create a new folder and class in the `datastructures` subfolder of the `test` branch of Gradle library source, with the name of the new data structure in the folder and class names, and complete your test implementation there.
-  - Ex. Linked Lists:
-    - `lib\src\test\java\datastructures\linkedlist\LinkedListTest.java`
+## WhiteBoard Process
 
-#### Whiteboard Diagram & README
+![Code Challenge 01](imgs/CodeChallenge02.jpg)
 
-- Include a README that describes the data structure operation.
-- Include sections for each method describing inputs and outputs.
-  - Include images where appropriate.
+## Approach & Efficiency
 
-### Data Structure: Extending an implementation
+In this approach I decided to create a new array that will take in the values of the initial array. I iterated over the initial array and copied the values at that iteration into the new array. If the iteration equaled to half the initial array length rounded up then the given value was pushed into first then continued on. After adding the extra value I had to take into account the shift to the right and added 1 to the future indexes. Once the loop ended the function then returned the new array. The efficiency should be O(n) timing since a single for loop was used.
 
-Some code challenges are not so much "interview style" algorithms, but rather tasks to "extend" your base class. In these cases, you should simply be adding methods to your class along with the appropriate tests.
+---
 
-#### Implement a New Method
+# 03 Insert to Middle of an Array
 
-- Work within the class you created for the data structure in the `datastructures` folder.
-  - Ex. Linked Lists:
-    - `lib\src\main\java\datastructures\linkedlist\LinkedList.java`
-- Create a new method within the class that solves the code challenge.
+In this challenge the problem domain was to take a given array and a given key value and implement a binary search through the array and return the index
 
-#### Testing Implementations
+## WhiteBoard Process
 
-- Add to the tests written for this data structure in the `datastructures` folder.
-  - Ex. Linked Lists:
-    - `lib\src\test\java\datastructures\linkedlist\LinkedListTest.java`
+![Code Challenge 03](imgs/CodeChallenge03.jpg)
 
-### Code Challenge / Algorithms
+## Approach & Efficiency
 
-Some of your daily code challenges will be of the algorithmic type, mirroring a whiteboard exam or interview.
+In my approach I decided to set values for the first index and the last index in the given array. These values helped to alter the midpoint which was what I was comparing the key to. If the key was greater than the midpoint value then the low point was moved up to cut out the entire left side of the array and vice versa if the key was less than the midpoint. If the array value equalled the key or if the lowpoint matched the highpoint I returned the index of the array value.
 
-You will be working in the `codechallenges` subfolder for all of your algorithm questions.
+---
 
-#### Code Challenges
+# 04 Fibonacci at nth Value
 
-- For each data structure, create a new folder and class in the `codechallenges` subfolder of the `main` branch of Gradle library source, with the name of the new data structure in the folder and class names. This is where your code challenge methods will eventually be written.
-  - Ex. Linked Lists: `lib\src\main\java\codechallenges\linkedlist\LinkedListChallenges.java`
-- Import the subfolder of the appropriate data structure source folder.
-  - Ex. Linked Lists: (`import datastructures.linkedlist.LinkedList;`)
-- For each code challenge, create a new method within that class, using the challenge name.
-  - Ex. `findMiddleNode()`
+In this challenge the problem domain was to find the value of the fibonacci sequence at the given nth value
 
-#### Code Challenge Tests
+## WhiteBoard Process
 
-- Work in the `codechallenges` subfolder of the `test` branch of Gradle library source, with the name of the new data structure in the folder and class names.
-  - Ex. Linked Lists: `lib\src\test\java\codechallenges\linkedlist\LinkedListChallengesTest.java`
-- Within this class, you'll add the tests appropriate for your new code challenge.
+![Code Challenge 04](imgs/CodeChallenge04.jpg)
 
-#### Whiteboards and READMEs
+## Approach & Efficiency
 
-- Create a master "README" at the top level of your `codechallenges` folder.
-  - Within, create links to a separate README for each daily challenge.
-- For each challenge, create a new README.md along with your whiteboard photo/image.
-  - This should describe your approach, methodologies, etc.
+During this interview I started out really strong and was able to present my ideas and thought processes very well. Halfway through I got hung up and the algorithm for the function. I was on the right track but had issues with keeping track of the prev/current values. After adjusting I was able to complete everything. Abdulahi was my grader for this interview
 
-#### Live Tests
+---
 
-Create a github action to automatically run all of your tests as you check in your code. These results should match your own, and will be readily found on the  **Actions** tab.
+#  05 Linked List
+
+In this challenge the problem domain was to create three methods to add to linked list, get index of given value, and override toString method.
+
+## WhiteBoard Process
+
+For this challenge we created Single Linked list and created 3 methods that allow us to insert a node, get value of nth node, and print out a string representation of the list
+
+## Approach & Efficiency
+
+In this challenge the key focus was ensuring that I always had a reference to the head node and figuring out how to manage the pointers allowed me to move the nodes around without losing any of the nodes. We are starting to implement the use of classes a lot more and explore the functionality that they provide.
+
+---
+
+#  06 Linked List Extended
+
+In this challenge the problem domain was to add another 3 methods that allows you to append a new node to the end of the linked list, insert a new node before given match value, and insert a new node after given match value.
+
+## WhiteBoard Process
+
+![Code Challenge 06](imgs/CodeChallenge06.jpg)
+
+## Approach & Efficiency
+
+In this challenge the key focus was ensuring that I always had a reference to the head node and figuring out how to manage the pointers allowed me to move the nodes around without losing any of the nodes. We are starting to implement the use of classes a lot more and explore the functionality that they provide.
+
+---
+
+#  07 Linked List Extended
+
+In this challenge the problem domain was to return the value of the node that was k away from the tail in the list
+
+## WhiteBoard Process
+
+![Code Challenge 07](imgs/CodeChallenge07.jpg)
+
+## Approach & Efficiency
+
+In this challenge I decided to add another property to our LinkedList class that tracks how many nodes are added to the list. This made approaching the kthFromEnd() method much easier to navigate. Knowing the size of the list I was able to subtract the given argument from the size and iterate through the list to that resulting value.
