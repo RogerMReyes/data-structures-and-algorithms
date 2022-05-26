@@ -87,6 +87,21 @@ public class LinkedList<T> {
     return null;
   }
 
+  public LinkedList<T> zipLists(LinkedList<T> list2){
+    Node<T> current = head;
+    Node<T> list1Walker = head;
+    Node<T> list2Walker = list2.head;
+    while(current != null){
+      current = current.next;
+      list1Walker.next = list2.head;
+      list2.head = list2.head.next;
+      list2Walker.next = current;
+      list2Walker = list2.head;
+      list1Walker = current;
+    }
+    return this;
+  }
+
   @Override
   public String toString(){
     String response = "";
