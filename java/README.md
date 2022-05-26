@@ -106,4 +106,4 @@ In this challenge the problem domain was to add a method to linked list that wil
 
 ## Approach & Efficiency
 
-In this challenge the way I approached this problem was by creating 3 pointers that will walk down both lists. These pointers serve as temporary placeholders so that none of our nodes are lost when changing a nodes next property. 
+In this challenge the way I approached this problem was by creating 3 pointers that will walk down both lists. These pointers serve as temporary placeholders so that none of our nodes are lost when changing a nodes next property.
