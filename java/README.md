@@ -93,3 +93,17 @@ In this challenge the problem domain was to return the value of the node that wa
 ## Approach & Efficiency
 
 In this challenge I decided to add another property to our LinkedList class that tracks how many nodes are added to the list. This made approaching the kthFromEnd() method much easier to navigate. Knowing the size of the list I was able to subtract the given argument from the size and iterate through the list to that resulting value.
+
+---
+
+#  08 Linked List Extended
+
+In this challenge the problem domain was to add a method to linked list that will take in another list as an argument and zip join it into the list calling the method.
+
+## WhiteBoard Process
+
+![Code Challenge 07](imgs/CodeChallenge08.jpg)
+
+## Approach & Efficiency
+
+In this challenge the way I approached this problem was by creating 3 pointers that will walk down both lists. These pointers serve as temporary placeholders so that none of our nodes are lost when changing a nodes next property. 

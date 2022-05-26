@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LinkListTest {
     @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+      Library classUnderTest = new Library();
+      assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
     }
 
     @Test void includesReturnsNodeValue(){
@@ -91,5 +91,18 @@ class LinkListTest {
     newList.insert(2);
     assertEquals(null, newList.kthFromEnd(2));
     assertEquals(null, newList.kthFromEnd(-3));
+  }
+
+  @Test
+  void zipListsReturnsZippedList() {
+      LinkedList<Integer> list1 = new LinkedList<>();
+      LinkedList<Integer> list2 = new LinkedList<>();
+      list1.insert(2);
+    list1.insert(3);
+    list1.insert(1);
+    list2.insert(4);
+    list2.insert(9);
+    list2.insert(5);
+    System.out.println(list1.zipLists(list2).toString());
   }
 }
