@@ -91,6 +91,7 @@ public class LinkedList<T> {
     Node<T> current = head;
     Node<T> list1Walker = head;
     Node<T> list2Walker = list2.head;
+    if(head == null && list2.head != null) return list2;
     while(current != null && list2.head != null){
       current = current.next;
       list1Walker.next = list2.head;
