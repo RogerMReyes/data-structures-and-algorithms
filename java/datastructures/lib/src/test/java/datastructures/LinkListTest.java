@@ -100,7 +100,7 @@ class LinkListTest {
       list1.insert(2);
     list1.insert(3);
     list1.insert(1);
-    list2.insert(4);
+//    list2.insert(4);
     list2.insert(9);
     list2.insert(5);
     System.out.println(list1.zipLists(list2).toString());

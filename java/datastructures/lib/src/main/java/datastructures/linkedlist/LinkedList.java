@@ -91,13 +91,21 @@ public class LinkedList<T> {
     Node<T> current = head;
     Node<T> list1Walker = head;
     Node<T> list2Walker = list2.head;
-    while(current != null){
+    while(current != null && list2.head != null){
       current = current.next;
       list1Walker.next = list2.head;
       list2.head = list2.head.next;
       list2Walker.next = current;
+      if (list2.head != null) {
+        list1Walker = current;
+      }
+      if(current != null){
       list2Walker = list2.head;
-      list1Walker = current;
+      }
+    }
+    if(list2.head != null){
+      list2Walker.next = list2.head;
+      list2.head = null;
     }
     return this;
   }
