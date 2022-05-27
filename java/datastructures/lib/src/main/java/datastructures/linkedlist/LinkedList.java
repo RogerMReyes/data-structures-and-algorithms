@@ -1,5 +1,7 @@
 package datastructures.linkedlist;
 
+import datastructures.Node;
+
 public class LinkedList<T> {
   public Node<T> head = null;
   public Node<T> tail;
