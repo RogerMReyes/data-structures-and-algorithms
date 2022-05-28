@@ -107,3 +107,18 @@ In this challenge the problem domain was to add a method to linked list that wil
 ## Approach & Efficiency
 
 In this challenge the way I approached this problem was by creating 3 pointers that will walk down both lists. These pointers serve as temporary placeholders so that none of our nodes are lost when changing a nodes next property.
+
+---
+
+#  09 Stacks and Queue
+
+In this challenge the problem domain was to create Stack and Queue classes that contain methods to add, delete, peek, and check if the data structure is empty.
+
+
+## WhiteBoard Process
+
+N/A
+
+## Approach & Efficiency
+
+I was able to complete all methods for Stacks and Queues. All methods have an O(1) Time performance. 
