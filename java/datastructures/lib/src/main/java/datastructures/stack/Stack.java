@@ -52,4 +52,8 @@ public class Stack<T> {
     string.append("NULL");
     return string.toString();
   }
+
+  public Node<T> getTop() {
+    return top;
+  }
 }

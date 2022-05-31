@@ -102,7 +102,7 @@ In this challenge the problem domain was to add a method to linked list that wil
 
 ## WhiteBoard Process
 
-![Code Challenge 07](imgs/CodeChallenge08.jpg)
+![Code Challenge 08](imgs/CodeChallenge08.jpg)
 
 ## Approach & Efficiency
 
@@ -121,4 +121,17 @@ N/A
 
 ## Approach & Efficiency
 
-I was able to complete all methods for Stacks and Queues. All methods have an O(1) Time performance. 
+I was able to complete all methods for Stacks and Queues. All methods have an O(1) Time performance.
+
+#  11 PseudoQueue
+
+In this challenge the problem domain was to create a PseudoQueue class that still followed the first in first out principle but used two stacks in order to implement the functionality.
+
+
+## WhiteBoard Process
+
+![Code Challenge 11](imgs/CodeChallenge11.jpg)
+
+## Approach & Efficiency
+
+The way I approached this was by pushing everything into the first stack when calling the enqueue() function. In order to return the value at the bottom of the stack I popped all the values out of stack1 while simultaneously pushing them into stack2. This makes the previously bottom value the top of stack2. I then popped and stored that value to return later after pushing everything back into stack1. 
