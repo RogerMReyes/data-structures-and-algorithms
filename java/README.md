@@ -134,4 +134,4 @@ In this challenge the problem domain was to create a PseudoQueue class that stil
 
 ## Approach & Efficiency
 
-The way I approached this was by pushing everything into the first stack when calling the enqueue() function. In order to return the value at the bottom of the stack I popped all the values out of stack1 while simultaneously pushing them into stack2. This makes the previously bottom value the top of stack2. I then popped and stored that value to return later after pushing everything back into stack1. 
+The way I approached this was by pushing everything into the first stack when calling the enqueue() function. In order to return the value at the bottom of the stack I popped all the values out of stack1 while simultaneously pushing them into stack2. This makes the previously bottom value the top of stack2. I then popped and stored that value to return later after pushing everything back into stack1.
