@@ -12,6 +12,7 @@ public class AnimalShelter {
   }
 
   public void enqueque(Animal animal){
+    if(animal.getType() == "dog" || animal.getType() == "cat")
     shelterQueue.enqueue(animal);
   }
 
