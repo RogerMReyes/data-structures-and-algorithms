@@ -17,12 +17,9 @@ public class AnimalShelter {
   }
 
   public Animal dequeue(String pref){
-    if(shelterQueue.isEmpty()){
-      throw new NoSuchElementException("Queue is Empty");
-    }
-    if(shelterQueue.getFront().value.getType() == pref){
-      return shelterQueue.dequeue();
-    }
+    if(shelterQueue.isEmpty()) throw new NoSuchElementException("Queue is Empty");
+    if(pref != "dog" && pref != "cat") return null;
+    if(shelterQueue.getFront().value.getType() == pref) return shelterQueue.dequeue();
     Node<Animal> walker = shelterQueue.getFront();
     Node<Animal> checker = walker.next;
     while(checker.value.getType() != pref && checker != null){
