@@ -32,7 +32,7 @@ public class Queue<T> {
 
   public T peek(){
     if(front == null){
-      throw new NoSuchElementException("Stack is Empty");
+      throw new NoSuchElementException("Queue is Empty");
     }
     return front.value;
   }
@@ -56,5 +56,13 @@ public class Queue<T> {
     }
     string.append("NULL");
     return string.toString();
+  }
+
+  public Node<T> getFront() {
+    return front;
+  }
+
+  public Node<T> getRear() {
+    return rear;
   }
 }
