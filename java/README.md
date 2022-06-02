@@ -148,4 +148,17 @@ In this challenge the problem domain was to create a new class called Animal She
 
 ## Approach & Efficiency
 
-In this code challenge I decided to store the animal objects in a queue to follow the first in first out operation. This allowed me to make enqueue() work naturally. For Dequeque if the pref matched the front a normal dequeue() from the Queue class would return the correct Animal object. If that match was later in the queue then pointers were needed to reasign the next properties in order to pull the node out of the queue and return the animal object inside it. 
+In this code challenge I decided to store the animal objects in a queue to follow the first in first out operation. This allowed me to make enqueue() work naturally. For Dequeque if the pref matched the front a normal dequeue() from the Queue class would return the correct Animal object. If that match was later in the queue then pointers were needed to reasign the next properties in order to pull the node out of the queue and return the animal object inside it.
+
+#  13 Bracket Validation
+
+In this challenge the problem domain was to create a function that takes in a string and returns true if the String has balanced brackets and false if it didn't.
+
+## WhiteBoard Process
+
+![Code Challenge 13](imgs/CodeChallenge13.jpg)
+
+
+## Approach & Efficiency
+
+In this code challenge I created a Bracket class that holds a Stack and a Queue. I also added three helper methods checkOpen(), checkClose(), and checkMatch() that are used in bracketValidation(). The three helper methods are used to check if the given character is open/closed and or if the two given characters make a valid bracket pair. A while loop is used to iterate over the queue and if the front is an open bracket it will dequeque it and push it to the stack. If the front is a closing bracket then it will check if the top of the stack and the front of the queue make a valid bracket pair. If checkMatch returns true it will call a pop and dequeue and if not then it will return false. If all brackets are paired off successfully the function will return true.
