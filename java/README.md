@@ -135,3 +135,17 @@ In this challenge the problem domain was to create a PseudoQueue class that stil
 ## Approach & Efficiency
 
 The way I approached this was by pushing everything into the first stack when calling the enqueue() function. In order to return the value at the bottom of the stack I popped all the values out of stack1 while simultaneously pushing them into stack2. This makes the previously bottom value the top of stack2. I then popped and stored that value to return later after pushing everything back into stack1.
+
+#  12 Animal Shelter
+
+In this challenge the problem domain was to create a new class called Animal Shelter that holds cat and dog objects. It operates in a first in, first out basis. It contains an enqueue() to add animal objects and a dequeue() that takes in a string dog/cat and pulls the first object out of the queue that matches.
+
+
+## WhiteBoard Process
+
+![Code Challenge 12](imgs/CodeChallenge12.jpg)
+
+
+## Approach & Efficiency
+
+In this code challenge I decided to store the animal objects in a queue to follow the first in first out operation. This allowed me to make enqueue() work naturally. For Dequeque if the pref matched the front a normal dequeue() from the Queue class would return the correct Animal object. If that match was later in the queue then pointers were needed to reasign the next properties in order to pull the node out of the queue and return the animal object inside it. 
