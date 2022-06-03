@@ -162,3 +162,15 @@ In this challenge the problem domain was to create a function that takes in a st
 ## Approach & Efficiency
 
 In this code challenge I created a Bracket class that holds a Stack and a Queue. I also added three helper methods checkOpen(), checkClose(), and checkMatch() that are used in bracketValidation(). The three helper methods are used to check if the given character is open/closed and or if the two given characters make a valid bracket pair. A while loop is used to iterate over the queue and if the front is an open bracket it will dequeque it and push it to the stack. If the front is a closing bracket then it will check if the top of the stack and the front of the queue make a valid bracket pair. If checkMatch returns true it will call a pop and dequeue and if not then it will return false. If all brackets are paired off successfully the function will return true.
+
+#  15 Trees
+
+In this challenge the problem domain was to create a new TreeNode, BinaryTree, and BinarySearchTree class. BinarySearchTree extends BinaryTree and contains two more methods for add() and contain()
+
+## WhiteBoard Process
+
+N/A
+
+## Approach & Efficiency
+
+In this code challenge I chose to use recursion in all the methods in order to travers through the trees. I made BinaryTree Generic and made BinarySearchTree extend BinaryTree<Integers> so that it inherited all of its properties and methods. 
