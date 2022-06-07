@@ -4,6 +4,8 @@ import datastructures.trees.BinarySearchTree;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BinarySearchTreeTest {
@@ -15,7 +17,8 @@ public class BinarySearchTreeTest {
     sut.add(42);
     sut.add(4);
     sut.add(16);
-    assertEquals("[23, 8, 4, 16, 42]",sut.preOrder(sut.getRoot()).toString());
+    ArrayList<Integer> sutArray = sut.preOrder(sut.getRoot(),new ArrayList<>());
+    assertEquals("[23, 8, 4, 16, 42]",sutArray.toString());
   }
 
   @Test

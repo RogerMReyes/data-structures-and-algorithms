@@ -1,50 +1,64 @@
 package datastructures.trees;
 
 
+import datastructures.Node;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class BinaryTree<T>{
   private TreeNode<T> root;
-  private final List<T> list = new ArrayList<>();
+
 
   public BinaryTree() {
   }
 
-  public List<T> preOrder(TreeNode<T> node){
-    list.add(node.getValue());
+  public ArrayList<T> preOrder(TreeNode<T> node, ArrayList<T> array){
+    array.add(node.getValue());
     if(node.getLeft() != null){
-      preOrder(node.getLeft());
+      preOrder(node.getLeft(), array);
     }
     if(node.getRight() != null){
-      preOrder(node.getRight());
+      preOrder(node.getRight(), array);
     }
-    return list;
+    return array;
   }
 
-  public List<T> inOrder(TreeNode<T> node){
-
+  public ArrayList<T> inOrder(TreeNode<T> node, ArrayList<T> array){
     if(node.getLeft() != null){
-      inOrder(node.getLeft());
+      inOrder(node.getLeft(), array);
     }
-    list.add(node.getValue());
+    array.add(node.getValue());
     if(node.getRight() != null){
-      inOrder(node.getRight());
+      inOrder(node.getRight(), array);
     }
-    return list;
+    return array;
   }
 
-  public List<T> postOrder(TreeNode<T> node){
+  public ArrayList<T> postOrder(TreeNode<T> node, ArrayList<T> array){
     if(node != null){
       if(node.getLeft() != null){
-        postOrder(node.getLeft());
+        postOrder(node.getLeft(), array);
       }
       if(node.getRight() != null){
-        postOrder(node.getRight());
+        postOrder(node.getRight(), array);
       }
-      list.add(node.getValue());
+      array.add(node.getValue());
     }
-    return list;
+    return array;
+  }
+
+  public int findMaxVal() {
+    ArrayList<Integer> newList = new ArrayList<>();
+    newList = (ArrayList<Integer>) this.preOrder(getRoot(), (ArrayList<T>) newList);
+    int max = 0;
+    for(int value : newList){
+      if( value > max){
+        max = value;
+      }
+    }
+    return max;
   }
 
   public TreeNode<T> getRoot() {
