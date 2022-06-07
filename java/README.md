@@ -173,4 +173,16 @@ N/A
 
 ## Approach & Efficiency
 
-In this code challenge I chose to use recursion in all the methods in order to travers through the trees. I made BinaryTree Generic and made BinarySearchTree extend BinaryTree<Integers> so that it inherited all of its properties and methods. 
+In this code challenge I chose to use recursion in all the methods in order to travers through the trees. I made BinaryTree Generic and made BinarySearchTree extend BinaryTree<Integers> so that it inherited all of its properties and methods.
+
+#  16 Max Value Search
+
+In this challenge the problem domain was to find the max integer value in the binary tree and return it.
+
+## WhiteBoard Process
+
+![Code Challenge 16](imgs/CodeChallenge16.jpg)
+
+## Approach & Efficiency
+
+In this code challenge I used the preOrder built in method to return a list of all the values in the binary tree. I then iterated over the list and return the max value inside it.
