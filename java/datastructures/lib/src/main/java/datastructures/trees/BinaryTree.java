@@ -2,6 +2,7 @@ package datastructures.trees;
 
 
 import datastructures.Node;
+import datastructures.queue.Queue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,6 +60,23 @@ public class BinaryTree<T>{
       }
     }
     return max;
+  }
+
+  public ArrayList<T> breadthFirst(TreeNode<T> root){
+    Queue<TreeNode<T>> newQueue = new Queue<>();
+    ArrayList<T> arrayList = new ArrayList<>();
+    newQueue.enqueue(root);
+    while(!newQueue.isEmpty()){
+      TreeNode<T> current = newQueue.dequeue();
+      arrayList.add(current.getValue());
+      if(current.getLeft() != null){
+      newQueue.enqueue(current.getLeft());
+      }
+      if(current.getRight() != null){
+      newQueue.enqueue(current.getRight());
+      }
+    }
+    return arrayList;
   }
 
   public TreeNode<T> getRoot() {

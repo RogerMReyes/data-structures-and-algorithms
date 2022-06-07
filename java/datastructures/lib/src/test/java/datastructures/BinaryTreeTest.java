@@ -83,4 +83,28 @@ public class BinaryTreeTest {
     sut3.setLeft(sut6);
     assertEquals(7,sut.findMaxVal());
   }
+
+  @Test
+  void breadthFirstReturnsCorrectOutput() {
+    BinaryTree<Integer> sut = new BinaryTree<>();
+    TreeNode<Integer> sut1 = new TreeNode<>(2);
+    TreeNode<Integer> sut2 = new TreeNode<>(7);
+    TreeNode<Integer> sut3 = new TreeNode<>(5);
+    TreeNode<Integer> sut4 = new TreeNode<>(2);
+    TreeNode<Integer> sut5 = new TreeNode<>(6);
+    TreeNode<Integer> sut6 = new TreeNode<>(9);
+    TreeNode<Integer> sut7 = new TreeNode<>(5);
+    TreeNode<Integer> sut8 = new TreeNode<>(11);
+    TreeNode<Integer> sut9 = new TreeNode<>(4);
+    sut.setRoot(sut1);
+    sut1.setLeft(sut2);
+    sut1.setRight(sut3);
+    sut2.setLeft(sut4);
+    sut2.setRight(sut5);
+    sut5.setLeft(sut7);
+    sut5.setRight(sut8);
+    sut3.setRight(sut6);
+    sut6.setLeft(sut9);
+    assertEquals("[2, 7, 5, 2, 6, 9, 5, 11, 4]", sut.breadthFirst(sut.getRoot()).toString());
+  }
 }

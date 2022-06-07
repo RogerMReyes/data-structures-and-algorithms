@@ -186,3 +186,15 @@ In this challenge the problem domain was to find the max integer value in the bi
 ## Approach & Efficiency
 
 In this code challenge I used the preOrder built in method to return a list of all the values in the binary tree. I then iterated over the list and return the max value inside it.
+
+#  17 Breadth First Search
+
+In this challenge the problem domain was travers through the binary tree using a breadth traversal
+
+## WhiteBoard Process
+
+![Code Challenge 17](imgs/CodeChallenge17.jpg)
+
+## Approach & Efficiency
+
+In this code challenge I set up a Queue and an Array List. The queue first enqueues the root that was passed in as an argument. A while loop will then store the saved node in a variable current. The value in that node is pushed into the array list and if the left and right nodes are not null they will be enqueued in that order. This loop will run until the queue is empty signifying that all the nodes have been hit. Returning the list in the end.
