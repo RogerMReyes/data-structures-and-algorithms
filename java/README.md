@@ -198,3 +198,15 @@ In this challenge the problem domain was travers through the binary tree using a
 ## Approach & Efficiency
 
 In this code challenge I set up a Queue and an Array List. The queue first enqueues the root that was passed in as an argument. A while loop will then store the saved node in a variable current. The value in that node is pushed into the array list and if the left and right nodes are not null they will be enqueued in that order. This loop will run until the queue is empty signifying that all the nodes have been hit. Returning the list in the end.
+
+#  18 K-ary Tree FizzBuzz
+
+In this challenge the problem domain was to create a K-ary tree and Node class with a method called fizzBuzz(). The fizz buzz method should traverse through the tree and return a new tree with all 3's replaced with Fizz, 5's replaced with Buzz, 3 and 5 with FizzBuzz, and the int as a string if it was neither of the above options
+
+## WhiteBoard Process
+
+![Code Challenge 17](imgs/CodeChallenge17.jpg)
+
+## Approach & Efficiency
+
+I decided to approach this challenge recursively. I created a function that calles a recursive method that will traverse through the tree until it hits a node with no children. At each point in the recursion a temp node is created and once the base case is hit the value will be checked with a fizzBuzz() helper function. The returned node will be added to its parents node and once all children are hit the current nodes value will call the fizzBuzz() method and continue along the call stack.
