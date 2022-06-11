@@ -15,9 +15,9 @@ public class KaryTree<T> {
     this.root = root;
   }
 
-  public KaryTree<KaryNode<String>> fizzBuzzTree(KaryTree<KaryNode<Integer>> tree){
+  public KaryTree<String> fizzBuzzTree(KaryTree<Integer> tree){
     if(tree == null) throw new IllegalArgumentException();
-    KaryTree<KaryNode<String>> newTree = new KaryTree<>();
+    KaryTree<String> newTree = new KaryTree<>();
     newTree.setRoot(fizzBuzzRecursion(tree.getRoot()));
     return newTree;
   }
@@ -52,11 +52,11 @@ public class KaryTree<T> {
     }
   }
 
-  public KaryNode getRoot() {
+  public KaryNode<T> getRoot() {
     return root;
   }
 
-  public void setRoot(KaryNode root) {
+  public void setRoot(KaryNode<T> root) {
     this.root = root;
   }
 }
