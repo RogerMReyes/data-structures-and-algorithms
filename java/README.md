@@ -210,3 +210,15 @@ In this challenge the problem domain was to create a K-ary tree and Node class w
 ## Approach & Efficiency
 
 I decided to approach this challenge recursively. I created a function that calles a recursive method that will traverse through the tree until it hits a node with no children. At each point in the recursion a temp node is created and once the base case is hit the value will be checked with a fizzBuzz() helper function. The returned node will be added to its parents node and once all children are hit the current nodes value will call the fizzBuzz() method and continue along the call stack.
+
+#  18 HashMap
+
+This code challenge was to create our own HashTable/HashMap
+
+## WhiteBoard Process
+
+N/A
+
+## Approach & Efficiency
+
+I ended up approaching this code challenge in two different ways. The first way was more geared towards the lab requirments where the key was hashed and the value was stored at the hashed key index. This led me to some issues with how I would track the keys after storing them and decided to have a set to keep track of them. The second way I went over with Ben on how they approached it in the last class. The second way has an Array List that has a linked list that holds a class HashMapPair holding key value pairs. This approach is able to handle collisions by adding key value pairs as the next node in the linked list.
