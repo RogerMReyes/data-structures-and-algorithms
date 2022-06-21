@@ -33,7 +33,12 @@ public class LinkedList<T> {
 
   public void append(T val){
     Node<T> newNode = new Node<>(val);
-    tail.next = newNode;
+    if(head == null){
+      head = newNode;
+    }
+    else{
+      tail.next = newNode;
+    }
     tail = newNode;
     listLength++;
   }
