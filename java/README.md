@@ -211,7 +211,7 @@ In this challenge the problem domain was to create a K-ary tree and Node class w
 
 I decided to approach this challenge recursively. I created a function that calles a recursive method that will traverse through the tree until it hits a node with no children. At each point in the recursion a temp node is created and once the base case is hit the value will be checked with a fizzBuzz() helper function. The returned node will be added to its parents node and once all children are hit the current nodes value will call the fizzBuzz() method and continue along the call stack.
 
-#  18 HashMap
+# 30 HashMap
 
 This code challenge was to create our own HashTable/HashMap
 
@@ -222,3 +222,15 @@ N/A
 ## Approach & Efficiency
 
 I ended up approaching this code challenge in two different ways. The first way was more geared towards the lab requirments where the key was hashed and the value was stored at the hashed key index. This led me to some issues with how I would track the keys after storing them and decided to have a set to keep track of them. The second way I went over with Ben on how they approached it in the last class. The second way has an Array List that has a linked list that holds a class HashMapPair holding key value pairs. This approach is able to handle collisions by adding key value pairs as the next node in the linked list.
+
+#  31 HashMap Extended
+
+This code challenge was to create a function to take a string as an argument and return the first instance of a repeated string.
+
+## WhiteBoard Process
+
+![Code Challenge 31](imgs/CodeChallenge31.jpg)
+
+## Approach & Efficiency
+
+The way I approached this Lab was by making a method inside of the hashmap class. This method takes in the String of text and also the hashmap itself. It splits the String up by regex and stores the words into a String[]. It then iterates over the array adding the word and its endex as key value pairs into the hashmaps bucket arrayList. If the .contains() of the word returns true then it will instead return the word.

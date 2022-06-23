@@ -4,6 +4,7 @@ import datastructures.Node;
 import datastructures.linkedlist.LinkedList;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class HashMap<K, V> {
 
@@ -58,6 +59,19 @@ public class HashMap<K, V> {
 
   public int hash(K key){
     return Math.abs(key.hashCode() % size);
+  }
+
+  public String repeatedWord(String text, HashMap<String, Integer> hashmap){
+    String[] newArray = text.split("\\W+");
+    for(int i = 0; i < newArray.length; i++){
+      if(hashmap.contains(newArray[i])){
+        return newArray[i];
+      }
+      else{
+        hashmap.add(newArray[i].toLowerCase(),i);
+      }
+    }
+    return "No Repeated Strings";
   }
 
   public ArrayList<LinkedList<HashMapPair<K, V>>> getBuckets() {
