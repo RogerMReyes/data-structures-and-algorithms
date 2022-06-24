@@ -217,7 +217,7 @@ This code challenge was to create our own HashTable/HashMap
 
 ## WhiteBoard Process
 
-N/A
+![Code Challenge 31](imgs/CodeChallenge31.jpg)
 
 ## Approach & Efficiency
 
@@ -229,10 +229,10 @@ This code challenge was to create a function to take a string as an argument and
 
 ## WhiteBoard Process
 
-![Code Challenge 31](imgs/CodeChallenge31.jpg)
+![Code Challenge 32](imgs/CodeChallenge32.jpg)
 
 ## Approach & Efficiency
 
-The way I approached this Lab was by making a method inside of the hashmap class. This method takes in the String of text and also the hashmap itself. It splits the String up by regex and stores the words into a String[]. It then iterates over the array adding the word and its endex as key value pairs into the hashmaps bucket arrayList. If the .contains() of the word returns true then it will instead return the word.
+In this code challenge I decided to take both BinaryTrees using my own built BinaryTree class and use the built in preOrder() method on them which returns them as arrays. I then added the first array into a Hashmap and when attempting to add the second tree array if the HashMap already contained the value then it gets added to the set property.
 
-Whiteboarded with Micheal and Abdulahi
+Whiteboarded with Abdulahi, Jason, and Jon
