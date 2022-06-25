@@ -57,6 +57,20 @@ public class HashMap<K, V> {
     return false;
   }
 
+  public ArrayList<HashMapPair<K, V>> getPairs(){
+    ArrayList<HashMapPair<K, V>> newArray = new ArrayList<>();
+    for(LinkedList<HashMapPair<K,V>> linkList : buckets){
+      if(linkList.head != null){
+        Node<HashMapPair<K, V>> walker = linkList.head;
+        while(walker != null){
+          newArray.add(walker.value);
+          walker = walker.next;
+        }
+      }
+    }
+    return newArray;
+  }
+
   public int hash(K key){
     return Math.abs(key.hashCode() % size);
   }
@@ -73,6 +87,7 @@ public class HashMap<K, V> {
     }
     return "No Repeated Strings";
   }
+
 
   public ArrayList<LinkedList<HashMapPair<K, V>>> getBuckets() {
     return buckets;
