@@ -211,6 +211,18 @@ In this challenge the problem domain was to create a K-ary tree and Node class w
 
 I decided to approach this challenge recursively. I created a function that calles a recursive method that will traverse through the tree until it hits a node with no children. At each point in the recursion a temp node is created and once the base case is hit the value will be checked with a fizzBuzz() helper function. The returned node will be added to its parents node and once all children are hit the current nodes value will call the fizzBuzz() method and continue along the call stack.
 
+# 26 Sort
+
+This code challenge was to decipher the given PseudoCode, do a whiteboard on the concept and then create the code.
+
+## WhiteBoard Process
+
+![Code Challenge 26](imgs/CodeChallenge26.jpg)
+
+## Approach & Efficiency
+
+In this Code Challenge it was important to track what was going on in the nested loops. 
+
 # 30 HashMap
 
 This code challenge was to create our own HashTable/HashMap
