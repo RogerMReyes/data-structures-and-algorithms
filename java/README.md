@@ -221,7 +221,19 @@ This code challenge was to decipher the given PseudoCode, do a whiteboard on the
 
 ## Approach & Efficiency
 
-In this Code Challenge it was important to track what was going on in the nested loops. 
+In this Code Challenge it was important to track what was going on in the nested loops.
+
+# 28 quickSort
+
+This code challenge was to create a quickSort method
+
+## WhiteBoard Process
+
+![Code Challenge 28](imgs/CodeChallenge28.jpg)
+
+## Approach & Efficiency
+
+I ended up approaching this code challenge in two different ways. The first way was more geared towards the lab requirments where the key was hashed and the value was stored at the hashed key index. This led me to some issues with how I would track the keys after storing them and decided to have a set to keep track of them. The second way I went over with Ben on how they approached it in the last class. The second way has an Array List that has a linked list that holds a class HashMapPair holding key value pairs. This approach is able to handle collisions by adding key value pairs as the next node in the linked list.
 
 # 30 HashMap
 
