@@ -5,7 +5,7 @@ public class Sort {
   public Sort() {
   }
 
-  public int[] insertionSort(int[] array){
+  public void insertionSort(int[] array){
     for(int i = 1; i < array.length; i++){
       int j = i - 1;
       int temp = array[i];
@@ -16,7 +16,6 @@ public class Sort {
       }
       array[j+1] = temp;
     }
-    return array;
   }
 
   public void mergeSort(int[] arr) {
@@ -68,16 +67,16 @@ public class Sort {
 
   public static int partition(int[] arr, int left, int right){
     int pivot = arr[right];
-    int low = left - 1;
+    int low = left;
 
     for(int i = left; i < right; i++){
       if(arr[i] <= pivot){
-        low++;
         swap(arr, i, low);
+        low++;
       }
     }
-    swap(arr, right, low + 1);
-    return low + 1;
+    swap(arr, right, low );
+    return low;
   }
 
   public static void swap(int[] arr, int i, int low){
