@@ -260,3 +260,15 @@ This code challenge was to create a function to take a string as an argument and
 In this code challenge I decided to take both BinaryTrees using my own built BinaryTree class and use the built in preOrder() method on them which returns them as arrays. I then added the first array into a Hashmap and when attempting to add the second tree array if the HashMap already contained the value then it gets added to the set property.
 
 Whiteboarded with Abdulahi, Jason, and Jon
+
+#  35 Graphs
+
+This code challenge was to create a graph and vertex class.
+
+## WhiteBoard Process
+
+N/A
+
+## Approach & Efficiency
+
+In my approach for graphs I decided to use a hashmap in order to hold a key value pair, the keys being the vertices and the values being  a List of all of it neighbors. In the vertex class I decided to use generics for the vertex value. Each vertex also contains a List of all edges. The Edge class I created contains two properties, a vertex and a weight.
