@@ -272,3 +272,15 @@ N/A
 ## Approach & Efficiency
 
 In my approach for graphs I decided to use a hashmap in order to hold a key value pair, the keys being the vertices and the values being  a List of all of it neighbors. In the vertex class I decided to use generics for the vertex value. Each vertex also contains a List of all edges. The Edge class I created contains two properties, a vertex and a weight.
+
+#  37 Business Trip Graphs
+
+This code challenge was to create a function that takes in a graph and a List of cities and return the cost of the trip if possible
+
+## WhiteBoard Process
+
+N/A
+
+## Approach & Efficiency
+
+In my approach I decided to do a breadth style of traversal. I had a queue that would only add the city if it was a neighbor of the vertex that was popped off.
