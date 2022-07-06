@@ -35,7 +35,7 @@ public class Graph<T> {
   public void addEdgeWeightedBiDi(Vertex<T> vertex1, Vertex<T> vertex2, int weight){
     if(adjVertices.containsKey(vertex1) && adjVertices.containsKey(vertex2)){
       adjVertices.get(vertex1).add(new Edge<>(vertex2, weight));
-      adjVertices.get(vertex1).add(new Edge<>(vertex1, weight));
+      adjVertices.get(vertex2).add(new Edge<>(vertex1, weight));
     }
   }
 
