@@ -1,10 +1,9 @@
 package datastructures.graph;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import datastructures.queue.Queue;
+
+import java.util.*;
 
 public class Graph<T> {
   private HashMap<Vertex<T>, List<Edge<T>>> adjVertices = new HashMap<>();
@@ -37,6 +36,27 @@ public class Graph<T> {
       adjVertices.get(vertex1).add(new Edge<>(vertex2, weight));
       adjVertices.get(vertex2).add(new Edge<>(vertex1, weight));
     }
+  }
+
+  public ArrayList<Vertex<T>> breadthFirst(Vertex<T> vertex){
+    Queue<Vertex<T>> newQueue = new Queue<>();
+    HashSet<Vertex<T>> visited = new HashSet<>();
+    ArrayList<Vertex<T>> nodes = new ArrayList<>();
+    newQueue.enqueue(vertex);
+    visited.add(vertex);
+    nodes.add(vertex);
+    while(!newQueue.isEmpty()){
+      Vertex<T> walker = newQueue.dequeue();
+      List<Edge<T>> neighbors = adjVertices.get(walker);
+      for(Edge<T> edge : neighbors){
+        if(!visited.contains(edge.getVertex())){
+          newQueue.enqueue(edge.getVertex());
+          visited.add(edge.getVertex());
+          nodes.add(edge.getVertex());
+        }
+      }
+    }
+    return nodes;
   }
 
   public Set<Vertex<T>> getNodes(){

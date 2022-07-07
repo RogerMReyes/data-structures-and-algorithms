@@ -20,6 +20,35 @@ public class GraphTest {
   }
 
   @Test
+  void breadthFirstReturnsCorrectArray() {
+    Graph<String> sut = new Graph<>();
+    Vertex<String> temp1 = sut.addNode("Pandora");
+    Vertex<String> temp2 = sut.addNode("Arendelle");
+    Vertex<String> temp3 = sut.addNode("Metroville");
+    Vertex<String> temp4 = sut.addNode("Narnia");
+    Vertex<String> temp5 = sut.addNode("Monstropolis");
+    Vertex<String> temp6 = sut.addNode("Naboo");
+    sut.addEdgeBiDi(temp1,temp2);
+    sut.addEdgeBiDi(temp2,temp3);
+    sut.addEdgeBiDi(temp2,temp5);
+    sut.addEdgeBiDi(temp3,temp4);
+    sut.addEdgeBiDi(temp3,temp5);
+    sut.addEdgeBiDi(temp3,temp6);
+    sut.addEdgeBiDi(temp4,temp6);
+    sut.addEdgeBiDi(temp5,temp6);
+    ArrayList<Vertex<String>> list = new ArrayList<>();
+    list.add(temp1);
+    list.add(temp2);
+    list.add(temp3);
+    list.add(temp5);
+    list.add(temp4);
+    list.add(temp6);
+    for(int i = 0; i < list.size(); i++){
+      assertEquals(list.get(i), sut.breadthFirst(temp1).get(i));
+    }
+  }
+
+  @Test
   void businessTripTest1() {
     Graph<String> graph = new Graph<>();
     Vertex<String> temp1 = graph.addNode("Pandora");
