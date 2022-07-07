@@ -273,6 +273,18 @@ N/A
 
 In my approach for graphs I decided to use a hashmap in order to hold a key value pair, the keys being the vertices and the values being  a List of all of it neighbors. In the vertex class I decided to use generics for the vertex value. Each vertex also contains a List of all edges. The Edge class I created contains two properties, a vertex and a weight.
 
+#  36 Breadth First Search
+
+This code challenge was to create a function inside graph that does a breadth first search approach and return a collection of those vertices.
+
+## WhiteBoard Process
+
+N/A
+
+## Approach & Efficiency
+
+In my approach I used a Queue to hold the order of vertexes to go through. I also used a set that doesnt allow duplicated to keep track of which vertices were already visited.
+
 #  37 Business Trip Graphs
 
 This code challenge was to create a function that takes in a graph and a List of cities and return the cost of the trip if possible
